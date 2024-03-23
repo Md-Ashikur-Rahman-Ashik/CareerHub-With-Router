@@ -1,5 +1,6 @@
 import { MdOutlineLocationOn } from "react-icons/md";
 import { MdCurrencyExchange } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Job = ({ job }) => {
   const {
@@ -10,6 +11,7 @@ const Job = ({ job }) => {
     location,
     job_type,
     salary,
+    id
   } = job;
 
   return (
@@ -39,7 +41,9 @@ const Job = ({ job }) => {
           </h2>
         </div>
         <div className="card-actions">
-          <button className="btn btn-primary">View Details</button>
+          <Link to={`/job/${id}`}>
+            <button className="btn btn-primary">View Details</button>
+          </Link>
         </div>
       </div>
     </div>
