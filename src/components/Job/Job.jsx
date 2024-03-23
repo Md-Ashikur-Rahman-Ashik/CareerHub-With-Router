@@ -1,3 +1,6 @@
+import { MdOutlineLocationOn } from "react-icons/md";
+import { MdCurrencyExchange } from "react-icons/md";
+
 const Job = ({ job }) => {
   const {
     logo,
@@ -24,6 +27,16 @@ const Job = ({ job }) => {
           <button className="px-5 py-2 font-extrabold border rounded border-[#7E90FE]">
             {job_type}
           </button>
+        </div>
+        <div className="mt-4 flex gap-4">
+          <h2 className="flex items-center gap-2">
+            <MdOutlineLocationOn className="text-2xl" />
+            {location}
+          </h2>
+          <h2 className="flex items-center gap-2">
+            <MdCurrencyExchange className="text-2xl" />
+            {salary}
+          </h2>
         </div>
         <div className="card-actions">
           <button className="btn btn-primary">View Details</button>
